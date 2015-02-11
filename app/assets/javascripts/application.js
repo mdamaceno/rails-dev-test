@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require bootstrap-sprockets
+//= require spark
+//= require pages/messages/index
+//= require pages/messages/index/archiveMessage
+
+$(function() {
+  Spark.init();
+});
