@@ -9,14 +9,14 @@ class App.messages.index.archiveMessage
   make: () ->
     @elementClass = '.js-archive-message'
     @$element = $(@elementClass)
-    @$row = @$element.closest('tr')
 
   bind: () ->
-    @$element.on 'click', (e) =>
-      e.preventDefault()
+    @$element.on 'click', (event) =>
+      @row = $(event.target).closest('tr')
+      event.preventDefault()
       $.ajax({
         url: @$element.attr('href'),
         type: 'put'
       }).always( =>
-        @$row.hide()
+        @row.hide()
       )
