@@ -23,7 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'state_machine', '~> 1.2.1', github: 'LiveTyping/state_machine'
+# Este repositório não existe, usando 'state_machines'
+# gem 'state_machine', '~> 1.2.1', github: 'LiveTyping/state_machine'
+gem 'state_machines'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -46,4 +48,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
