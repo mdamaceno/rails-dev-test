@@ -13,8 +13,12 @@ class Message < ActiveRecord::Base
       transition any => :archived
     end
 
-    after_transition to: :read do |message|
-      message.read_at = Time.current
+    after_transition on: :read do |message|
+      message.read_at = Time.now
+    end
+
+    around_transition to: :archive do |message|
+      message.archived_at = Time.now
     end
   end
 end

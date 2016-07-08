@@ -46,6 +46,8 @@ class MessagesControllerTest < ActionController::TestCase
 
     assert @message.reload.archived?
 
+    assert_not_nil @message.reload.archived_at
+
     assert_redirected_to messages_path
   end
 end
