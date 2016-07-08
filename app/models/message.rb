@@ -5,7 +5,7 @@ class Message < ActiveRecord::Base
   state_machine :state, initial: :unread do
 
     event :read do
-      transition unread: :read 
+      transition unread: :read
     end
 
     event :archive do

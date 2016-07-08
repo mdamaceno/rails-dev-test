@@ -19,14 +19,14 @@ class MessageTest < ActiveSupport::TestCase
 
   #
   # State machine
-  # 
+  #
   test "initial state" do
     message = Message.create(title: '1', content: '2')
     assert message.unread?
   end
 
   test "reading a message" do
-    message = messages(:one)
+    message = create(:message_unread)
 
     assert message.unread?
     message.read

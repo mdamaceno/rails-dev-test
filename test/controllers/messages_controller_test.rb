@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MessagesControllerTest < ActionController::TestCase
   setup do
-    @message = messages(:one)
+    @message = create(:message_unread)
   end
 
   test "should get index" do
@@ -42,7 +42,7 @@ class MessagesControllerTest < ActionController::TestCase
   end
 
   test "should archive message" do
-    patch :archive, id: @message
+    put :archive, id: @message
 
     assert @message.reload.archived?
 
