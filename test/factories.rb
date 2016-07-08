@@ -5,7 +5,7 @@ FactoryGirl.define do
     state 'unread'
   end
 
-  factory :message_read, class: Message do |m|
+  factory :message_read, class: Message do
     title 'MyString'
     content 'MyText'
     state 'read'

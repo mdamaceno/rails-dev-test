@@ -1,9 +1,10 @@
 class Message < ActiveRecord::Base
 
+  attr_accessor :read_at
+
   validates :title, :content, presence: true
 
   state_machine :state, initial: :unread do
-
     event :read do
       transition unread: :read
     end

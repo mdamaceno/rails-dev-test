@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Este repositório não existe, usando 'state_machines'
 # gem 'state_machine', '~> 1.2.1', github: 'LiveTyping/state_machine'
 gem 'state_machines'
+gem 'state_machines-activerecord'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
